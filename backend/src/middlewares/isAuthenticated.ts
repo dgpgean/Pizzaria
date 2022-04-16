@@ -12,6 +12,7 @@ export function isAuthenticated(req:Request, res:Response, next:NextFunction){
     return res.status(401).end()
   }
 
+  //tirando a palavra "Bearer" do token
   const [,token] = authToken.split(" ")
 
   try {
